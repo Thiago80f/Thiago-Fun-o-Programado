@@ -527,7 +527,7 @@ section {
 }
 
 .search-container button:hover {
-    background-color: #555;
+    background-color: #d8961c;
 }
 body {
     font-family: Arial, sans-serif;
@@ -538,7 +538,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 6px 0;
 }
 
 nav ul {
