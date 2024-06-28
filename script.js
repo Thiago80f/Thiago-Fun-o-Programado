@@ -277,3 +277,20 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Erro ao carregar produtos:', error));
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Seu código existente
+
+    window.searchProducts = function() {
+        const query = document.getElementById('search-bar').value.toLowerCase();
+        const products = document.querySelectorAll('.product-card');
+
+        products.forEach(product => {
+            const productName = product.querySelector('h3').textContent.toLowerCase();
+            if (productName.includes(query)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    };
+});
