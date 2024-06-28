@@ -228,3 +228,52 @@ document.addEventListener('DOMContentLoaded', function() {
     // Exibir a seção inicial
     document.getElementById('home').style.display = 'block';
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('main section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+
+            sections.forEach(section => {
+                if (section.id === targetId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            this.classList.add('active');
+        });
+    });
+
+    // Exibir a seção inicial
+    document.getElementById('home').style.display = 'block';
+
+    // Carregar produtos do arquivo JSON
+    fetch('products.json')
+        .then(response => response.json())
+        .then(products => {
+            const productGrid = document.querySelector('.product-grid');
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product-card');
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p>R$ ${product.price}</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                `;
+                productGrid.appendChild(productCard);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar produtos:', error));
+});
