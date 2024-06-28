@@ -40,7 +40,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f4f4f4;
+    color: #7434db;
 }
 
 section {
@@ -165,7 +165,7 @@ footer .newsletter-form button {
 }
 
 footer .newsletter-form button:hover {
-    background-color: #45a049;
+    background-color: #21cfe6;
 }
 .gallery-grid {
     display: grid;
@@ -231,7 +231,7 @@ button {
 
 button:hover {
     transform: scale(1.05);
-    background-color: #45a049; /* Altere a cor conforme necessário */
+    background-color: #18e923; /* Altere a cor conforme necessário */
 }
 .gallery-item {
     opacity: 0;
