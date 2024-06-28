@@ -536,7 +536,7 @@ body {
 }
 
 header {
-    background-color: #464646;
+    background-color: #c00a1a;
     color: #fff;
     padding: 2px 0;
 }
@@ -566,7 +566,7 @@ nav ul li a {
 }
 
 #search-bar {
-    width: 300px;
+    width: 100px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
