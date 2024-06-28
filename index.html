@@ -23,6 +23,38 @@
             <input type="text" id="search-bar" placeholder="Buscar produtos...">
             <button onclick="searchProducts()">Buscar</button>
         </div>
+
+<div class="search-advanced">
+    <input type="text" id="search-bar" placeholder="Buscar produtos...">
+    <button onclick="searchProducts()">Buscar</button>
+    <div class="filter-options">
+        <label>
+            Categoria:
+            <select>
+                <option value="all">Todos</option>
+                <option value="computers">Computadores</option>
+                <option value="accessories">Acessórios</option>
+                <!-- Adicione mais opções aqui -->
+            </select>
+        </label>
+        <label>
+            Preço:
+            <input type="number" placeholder="Min" min="0">
+            <input type="number" placeholder="Max" min="0">
+        </label>
+        <label>
+            Avaliações:
+            <select>
+                <option value="all">Todas</option>
+                <option value="4plus">4 estrelas e acima</option>
+                <option value="3plus">3 estrelas e acima</option>
+                <!-- Adicione mais opções aqui -->
+            </select>
+        </label>
+    </div>
+</div>
+
+
     </header>
 
     < 
@@ -250,6 +282,21 @@ Evite reflexos na tela do computador ajustando a posição do monitor e a fonte 
             <p>Parcelamento</p>
         </div>
     </div>
+
+<section id="featured-products">
+    <h2>Produtos em Destaque</h2>
+    <div class="featured-grid">
+        <div class="featured-card">
+            <img src="images/product1.jpg" alt="Produto 1">
+            <h3>Produto 1</h3>
+            <p>R$ 100,00</p>
+            <button>Comprar</button>
+        </div>
+        <!-- Adicione mais produtos em destaque aqui -->
+    </div>
+</section>
+
+
 
     </section>
 
