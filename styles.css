@@ -133,7 +133,7 @@ footer .redes-sociais a {
 }
 
 .whatsapp-button {
-    position: fixed;
+    position: center;
     bottom: 20px;
     right: 20px;
     width: 60px;
