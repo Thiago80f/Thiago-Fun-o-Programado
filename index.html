@@ -1,373 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TH_Informatica</title>
+    <title>Loja de Peças de Computadores</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">TH_Informatica</div>
+        <div class="logo">
+            <h1>TH_INFORMATICA</h1>
+            <img src="https://yt3.googleusercontent.com/hNcOqbQFuhXDkfY4nlnnobUejFfbSISd6immQpBNLzy3jMuxh9J9ocuMPptZVf-gZeDFFurwSnA=s176-c-k-c0x00ffffff-no-rj"
+                alt="Logo da Loja">
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#products">Produtos</a></li>
-                <li><a href="#testimonials">Depoimentos</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#carrinho">Carrinho</a></li>
             </ul>
         </nav>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Buscar produtos...">
-            <button onclick="searchProducts()">Buscar</button>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button>Buscar</button>
         </div>
-
-        <div class="search-advanced">
-            <input type="text" id="search-bar" placeholder="Buscar produtos...">
-            <button onclick="searchProducts()">Buscar</button>
-            <div class="filter-options">
-                <label>
-                    Categoria:
-                    <select>
-                        <option value="all">Todos</option>
-                        <option value="computers">Computadores</option>
-                        <option value="accessories">Acessórios</option>
-                        <!-- Adicione mais opções aqui -->
-                    </select>
-                </label>
-                <label>
-                    Preço:
-                    <input type="number" placeholder="Min" min="0">
-                    <input type="number" placeholder="Max" min="0">
-                </label>
-                <label>
-                    Avaliações:
-                    <select>
-                        <option value="all">Todas</option>
-                        <option value="4plus">4 estrelas e acima</option>
-                        <option value="3plus">3 estrelas e acima</option>
-                        <!-- Adicione mais opções aqui -->
-                    </select>
-                </label>
-            </div>
-        </div>
-
-
     </header>
-
-    < <h1>Bem-vindo à TH_Informatica</h1>
-        <p>Os melhores produtos direto da loja para sua casa.</p>
-        <button onclick="scrollToSection('about')">Saiba Mais<h2>Organização dos Cabos
-
-
-                Dicas:
-
-                Use organizadores de cabos, como abraçadeiras, tubos ou caixas de passagem para manter os cabos
-                organizados.
-                Etiquete os cabos para identificar facilmente os dispositivos aos quais pertencem.
-                Considere usar um sistema de gerenciamento de cabos debaixo da mesa para esconder os cabos e manter o
-                espaço limpo.
-                2. Ergonomia
-                Dicas:
-                Certifique-se de que o monitor esteja na altura dos olhos para evitar tensão no pescoço.
-                Utilize uma cadeira ergonômica que suporte bem a coluna e ajuste-se à sua altura.
-                Mantenha o teclado e o mouse em uma altura que permita os braços ficarem em um ângulo de 90 graus.
-                Use suportes para os pés se necessário para melhorar a postura.
-                3. Iluminação Adequada
-                Dicas:
-                Utilize luz natural o máximo possível, posicionando a mesa perto de uma janela.
-                Adicione uma lâmpada de mesa com luz ajustável para reduzir o cansaço visual.
-                Evite reflexos na tela do computador ajustando a posição do monitor e a fonte de luz.</h2></button>
-
+    <main>
+        <section id="home">
+            <h1>Bem-vindo à Nossa Loja de Peças de Computadores</h1>
+            <p>Encontre as melhores peças e acessórios para o seu PC.</p>
         </section>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="filtros">
+                <select id="categoria">
+                    <option value="">Categoria</option>
+                    <option value="processadores">Processadores</option>
+                    <option value="placas-mae">Placas-Mãe</option>
+                    <option value="memorias">Memórias</option>
+                </select>
+                <select id="preco">
+                    <option value="">Preço</option>
+                    <option value="0-100">R$0 - R$100</option>
+                    <option value="100-500">R$100 - R$500</option>
+                    <option value="500-1000">R$500 - R$1000</option>
+                </select>
+                <button>Filtrar</button>
+            </div>
+            <div class="lista-produtos">
+                <!-- Produtos serão inseridos aqui -->
+            </div>
+        </section>
+        <section id="products">
+            <h2>Produtos</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="1" data-name="Produto 1" data-price="10.00">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRsdnYDjPlUKcbfIw6kiVzYFhjHj6WbHfRP39X-fWL3UUm_ZCzq9qPXjF7oGygi7ycBXPxuxUxEDevNkEUm4ndt8_lx15kdS6afRLtqEmRmbSdWOEaonTsm0zH9&usqp=CAc"
+                        alt="Produto 1">
 
+                    <h3>Produto 1</h3>
+                    <p>Placa De Rede 10/100/1000mbps Pci Express Gigabit Mymax</p>
+                    <p>R$ 40,00</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="2" data-name="Produto 2" data-price="20.00">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_997630-MLB72310568701_102023-O.webp" alt="Produto 2">
+                    <h3>Produto 2</h3>
+                    <p>Placa De Vídeo Thinetworks Tn502 16mb Pci 2 Vga Dual Video
 
-        <section id="testimonials">
-            <h2>Depoimentos</h2>
-            <div class="testimonial-carousel">
-                <div class="testimonial">
-                    <p>"Excelente qualidade e atendimento. Recomendo a todos!"</p>
-                    <h4>- Maria Silva</h4>
+                        ==========================================================
+
+                        A placa de vídeo TN 502 alia baixo custo a um baixo consumo de energia (menos de 500mV para duas
+                        estações), consequentemente uma baixa dissipação de calor. A TN 502 é muito versátil sendo
+                        perfeita para implantação de grandes projetos. Devido a essa versatilidade a placa TN 502 é
+                        ideal para projetos dentro de ambientes hostis (Ex.: locais com muita poeira ou calor);
+
+                        -----------------------
+                        Especificações:
+                        ------------------------
+                        • Memória: 8 MB por cabeça
+                        • Consumo 0,5 W
+                        • Interface de Conexão PCI
+                        • Múltiplos Vídeos: Sim
+                        .</p>
+                    <p>R$ 169
+                        ,
+                        90</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-                <div class="testimonial">
-                    <p>"Os produtos são frescos e o preço é ótimo. Cliente fiel!"</p>
-                    <h4>- João Oliveira</h4>
+                <div class="product-card" data-id="3" data-name="Produto 3" data-price="30.00">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lvd6lc8ee65ca6"
+                        alt="Produto 3">
+                    <h3>Produto 3</h3>
+                    <p>HD Sata Para Computador e DVR 160GB / 320GB / 500GB Com Garantia.</p>
+                    <p>R$ 100,00</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
                 </div>
-                <!-- Adicione mais depoimentos aqui -->
+                <div class="product-card" data-id="4" data-name="Produto 3" data-price="30.00">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7qukw-lgtuy3plxupicf"
+                        alt="Produto 4">
+                    <h3>Produto 4</h3>
+                    <p>Mouse Pad Gamer Grande Speed Borda Led 7 Cores Rgb Impermeável 300mm X 800mm</p>
+                    <p>R$ R$24,24 - R$41,14
+                        60% OFF</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-id="5" data-name="Produto 5" data-price="30.00">
+                    <img src="https://down-br.img.susercontent.com/file/6eb0403fe9091e114d0aba5154581628"
+                        alt="Produto 4">
+                    <h3>Produto 4</h3>
+                    <p>Caixa de Som Potente Usb P2 Para Computador Pc Notebook Home Office</p>
+                    <p>R$R$19,99
+                    </p>
+                </div>
+        </section>
+        <section id="cart">
+            <h2>Carrinho de Compras</h2>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: R$ <span id="cart-total">0.00</span></p>
+                <button id="checkout"></button>
             </div>
         </section>
 
-
-        <section id="blog">
-            <h2>Blog</h2>
-            <article>
-                <h3><a href="#">Novidades de Verão na TH_Informatica </a></h3>
-                <p>Confira as novidades e promoções especiais para este verão...</p>
-            </article>
-            <article>
-                <h3><a href="#">Dicas de Para Seu espaço de Trabalho</a></h3>
-                <p>Descubra Como melhorar seu ambiente de Trabalho com nossos perifericos como cadeiras gamer,mauses,
-                    teclados,monitores e muito mais venha para TH_Informatica</p>
-            </article>
+        <h1>Por Favor Entre Em Contato Para Finalizar Seu Pedido Para Sua Segurança</h1>
+        </div>
         </section>
 
-        <section id="contact">
-            <h2>Contato</h2>
-            <form>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <div class="instagram-button">
-                <a href="https://www.instagram.com/th_informatica__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                    target="_blank">
-                    <img src="https://img.freepik.com/vetores-premium/etapas-do-concurso-02_811406-372.jpg"
-                        alt="Instagram">
-                    Siga-nos no Instagram
+        </section>
+    </main>
+    <footer>
+        <div class="contato">
+            <h3>Contato</h3>
+            <p>Email: thinformaticaloja@gmail.com</p>
+            <p>Telefone: (33) 99875-6987</p>
+            <div class="whatsapp-button">
+                <a href="https://wa.me/5533998756987" target="_blank">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAflBMVEUppxr///8AoAAAngAlphUVowAAnAAgpQ38/vzw+O/0+vPR6c/4/Pf5/Pne79zr9urC4r/Z7dec0pi23LPL5sjj8uJCrzdet1qIyYOWz5FRs0yp1qWk1p+63bkzqyVTtkp0wHBmumNfulZ8w3k2qy5Fr0GNy4pxwGpJq0ex3K63Y75/AAAQuUlEQVR4nM1d24KqOgzF0louykUFRRTxfvz/Hzyg40jTAmlhZk8ezsM+I3TRNk1W0sSaDBZvuWWMWgOEMnZYesNHYg37ueOtSmKzIUhewm1S+q7zD8HMgseWjIDkJYxsH8Gg+RkAZrZaXMeD8oKTZqsBcIzBeNGtIHxMKLVwQm+RMRxDMLNo8wNQaqGk2ESzXwTjrM7pMP3VCYel55WRKjABk5xT/iOz8hbO03PyO2AWBf+xWXkL5cXiF8D4P7RXoHBS+D8MZnaejqqMO+FMz5qKQAvMLCrIb0GphRR7LTg6YJIN+5UV9hHONomGXsODme/XP6eO24Sy034+Phh3cfm13dIUdlm4Y4OJ77+9xN7C2T0eF0x0/SfT8hJ2jcYE84+W2DeaC+4ERYE5//7OF4Wy80hg3Pu/xlKjuYdjgAnWv3pQtglZB8PB+Ns/gaVCs+211frArP4KlhrNahiYf6qSobBDj4ruBhOlfwhLhSbtRtMJZvVvjxdZ2KVz33SB8f/SGnsJu3ah6QATX/+RNdYlfNthqLWDSdZ/bl5qYet2qqMVTHj8k1gqNMdWW6ANjLf5o1gqNJs2yrMFzHwxij1GOefsW/g4bBtlixbnUw3GWQ6mxmiFgvD0cFrfy/J8Lsv7+nRIKSNs8KM5XaqJATUYf5giq4ZM+LbM8kfkx0HoerOZ54ZB7EfLPCu3nJBh896moJVgwu2ADVN//MMtj+JQSRPNwzha3k58EB62VSoBJZi7uXFZDXK9WwU9HISX+PmRD6BGyR0LJjfGwqbFLnZR3NDcDfLUnB4lOxyYwHABUDY9+TMNzs6Z++spMX2ZwleTwTip0exTxkzCEOHGMFLNU/mzyWCMTkvOiw3CSVfCuV2Mzh+26QcTXfQ/FGWXc7+H3irBJjU4e+hFcm4gGNfAvGS0RLJ0beKfLYPXruFaAGCchaX7jSjZ5oOzK7zlSVsTULoA2waA0T/6ObthqeBOiW9cd3I4NAREMK727mfXMZJeapkttR1bthEPZxFMpLnIKDlqBx7bJdalTikV96oAJtTc/RR+GllCf/VYZLdbtnis/D7lXS0MPTRABzTBOEs9O4azTnLe3W/S6uNVHk3lDVT/4ZRa6WbfCT/XPHKI4Aw0wYQXrSdxWdF/f5bZqrSmtuS6VE6OPWXlqj0XK9IdQ3NqmmB2ts5z2KWFLXVc/8zt9kAbZTY9t+aWxXq8o900OBtgQkvno7BUvfVnyePQ66tQQq6PRB0Wj7WUGi8aU9MAk+lMDFNz8nN/kdqob8JJuvCVzkJ80EFjZyowno4macESL1K8x1XDUZ63vo6jS9lngj9gFhqqjF1V+8XNt3ohaV5ZQirlttJB03DTvsHMCvw4eLpXbN9VqW2QWIyXqs+y19BpvPiemm8wD/xAKM1lLN7OxI6vlHW6k+0hJ6f4Z7GHBGaL/xZkI2MJS1OGj/NSYRloGIl8C8FoWGXsKH/KeEgkhxWyHpjhqW5avA/vN5g7Xgld5VdHw1KCOZH3YIB3RlgpgtGIxfAHfO/kMR3IuNLpQ0KzRG8bfg0EMAv8IivhW2eDsVRi55I9cMYvtEUTjHvH/pBf4MEw240SXCc7iMZFc16snDXArNCrzF6CV2pp0Q5R6PsIa1/xdNUAg47GkCN841LjsO0eUQG/E57z/nKsnmBC7CqTSdEVWAvMPFzx/r4fCbDHMHsdVZZqRK1CMjAxMbCi7NMuN+HAXkM6gU/lYO3Fr+/wBJNjJ4YDNtk9C2/j073jTBw9G74hBFIKCdKsoCx/gwlL5MsJ2KNOLjB3/L0IE8PAG5Ve8EBODTuHX2B85Cr7Ppze4gsfjl2+TYObsZ0G3KTggBxaGn+B2WPhL8SjwD02f8jSj5kTGrDvTyHA7pvtsItm/wLjZTgwEhv6aJ4DXMg4wp/eQGxgLGH5YlJ/aAtP/bGb+NVC2ngPLfKmQx+YguFc9AdmN+TgajrQQmtzCg+1jbDIziJS48QbAmJIe9yKpTx4golwq4wdRb0cNg9HDgkOX4uDa46KiVODzeEhUQ1mjjyZ2A1MTPMlPJsAMc5Vg+G9DLtp5hUYD7ciKEgpFBSWwmGLpkZQ6vCeODVRilpntf9rTVwcEwKdZeEoYXfJt/K0+NGmcHEJIB3o2jexJjFulVFxIXlNlUktOcXAWZruGn4VjZoMR0+wuAKD8xpgbPdRNN4gKbrnOjTLJ6ifJp41K5w+s6MKDO7IhJ9LMOeoKiAw06FIBQGeuYtjwUg2sRycL8PFzJtYeAFNVZyxrx24fr8LJJXimKNq31rI7BIuBsmEVdYCJh5rne1wIzw41hznGFJxIYlGBlXmTvuFKTkAjrQVboRsbnmo84BawpZJjgCMIiDoaLDXQICx4eHW69SzYhQYfhG/FbRlcxlMohedFN4GIia4J01jC6eZ2VF4+gPQS1SyZiZzU9+5fhwVNw1OR9mRhXNMifjpodaVac5JOYQaJKK6waUmkoeF4yNtYVOE0PfiJxiVeJiaZk9hZ2GL4lYP2Vk4n9AWdG8CzSV62YtYXMNsxS8BGiDAbYWNhTPjpoL3H0s0A3QBBvLP/CB8vBlqmtndOqE0hS0MdSXpSnjbwJgDeAktRHWGmhl+spDegvDsvTRUaGoiOZL294kHF9LjwoGhVAQjDxVcncCt8nYh4h5EBRoqMAXm2eDMVICBrPdm2NQAMDgrr8CBYQfh2apULkBEzYbdvSPiqsWRZygoEhjVIUZBMZJkkHIGYAZYE7IgwFjkLrpv/pBqCL8IRp0xaIvr3FlSczRGywy50PoVQP1HhcgSOg/zCCFQADizGakA+lXzcwSlmD82y429ABPVXEExOTSjliUMbOsKjencGB6aVxyPIzx71eIQUxgrmi3NqEAjc4ZekbYZMDTbyB+2BUFPZ8+MbrBsDQzNyjZDenHdLsC3sDvMeIr1M+okFyDGuQB3C5fYJTpnHVcGuJSLFl70LRuQyY507TdIT7PHbf4IlbPQPek2CSe2bRPerqPA65Bj3CE5AEBoLNvJn6+QfFPmCyEqTdmh2t5JfrpYXE3aUUs8M3FBF/JAsjM8FZ7elTjEFQlp++sn1EjZm+l195tTaimuB0OqCWc025EVmJCAnck2ioyeSXym7I2lebTO/F25vkCNByrmuEgSMEAymt30LERjyXPj5Yen4clhJLdacMtsDbKJTOjZmtFEcs2AOF92xkw4VzCcdTY6IUWmysoONmKERJzaBWqV1VyzgzOvQUgj6D5rOVfcrJn7ebZrqcXqnRqj4CC7CRnSODjo+My2I9gkC2WK3OeJ47Vee27qIVAyy8U5AHV8BnkHABL9fbkG1T7Xulg3/4CBqwx5DZYs8DFNQPM5vbE5hih71ZDPKPhWnL8bbv8/Y5oxMjnlKKY09e9KJqUpdoj/UapgvyFD5/QZbUbmAXCQ1OD2Tz7jD3RNz48CoCDZGJnU8MoD8JDJKTDdBEFacrJB3qpvGFUE0NbYtKZ7naExR5LcUiIQJhmKbCNM3Yb4szooyNHCFiYiu7lGVpOUuXDD/I6xRb8eCI+flQ7iTJMlMsz7ymqaBMh4PazE46JsB0rWy55rtu7m4wzwC3gJMp5AaaCVCcjhZUbkvU5WlJ1Vvr1mcgwg39Ap18+YiqWRFwITTkPklFKelu33uQUspBRfMVtgE06/cjSxm6aaGnH5u2h/mPLLseXQccuGw8kLsMECdC58fXDUYNA3gYiQVDrBpRB8wWEkVV1jXBXNnQdYWfx1llf2Xg0GXdIA8IyaaUuckMMumc2drw3kzOfRVbhuSzJgz6FL4LwYkOddAGRiCOT49Mu5MTJlp1se+b4f5dkJtBSBJ9lkjg5Zva43vm5p4NYZP4gr2uhuSV1hy65FupvCD1BLIJMUv0mD1/0Z3M0GJl6odAflLcgDkrKJ5ujk6Ob9GWRGFxFVM/oWFUq4JdEg+AJY/JUjqnHnjDLxdShzBivw4ZUkaNL9TU29wMww6wxmYg6p6CY9e7qHWJC5TLW82auve5o7xGEOqHlnnFuAr0cT+UjFLf1avjORv8BgLt+CVKNwvFVGqGztrHA+WS38HUh5320+I8BkwvmvWdelXSg5yS6cTgkc/mZz3mDagmHN34g85UhVQymnN5nHmZ/xn+oTZvuuB9AbQYMkgJymZRLx43yryFZ3dGqS8tP7Z/hKDYA6mglTWdf8SbcGZSeKjcIR1Qu6f5T6p4ZGH0nDxG4wn3xyzghL73XlzPyoF8Fk7L5UUQQ6JTQqy+H7EZ/qJnnPgc5E1iSn30DKbLl6dVZJHmt8vULG1g9lKSq9YuSNK3cfMD3hAFqIzH7JX0B2kd8sZZos7xyTAkQrKEs11aGHhbLP3DYqAnW79DCa9d+0OD/8QK7JGq7OzO6ZHm6zMgrVxIBmYfVmsaYGGLdz13GxlJi3T9y2AqBe+DjYrXgos+00T9po9aVmGa2icZI3q2h17hqmrPbaJk7yOFWDrjZQ885QtbaqfzvkHa2LHpopHXZz8TfBuF1xJ0WGfJ8kj82peBagfgq1itPm0UkJzm+aKXfs0DSxhMpz+/alDu+0oGUerKJov48iP+glasOzbvog27dVnuvyONX3fUYVZ3XSNfeA7ytWa2y30PjWsJMiWtxcO0cVJj+JYLzW+AHX2v8GUil0bdsOXh0HFU5hTYwPGP39ryPuLjVIF4LdG2Ah3bzF5aQDS+V2ihOZNB6j0n0qCKYlgkgtk/6WSPFLo1xOGGVV1Gv2lbFKXvSNKGixtHolKC2jTgGKK4hyJe1MNTXsJP1dczy7u0UYWRto73htWnSHybtYUbD9pEAD82K/xJm5/u5Ipy9DjNnpsj0HQ5a5t0yNG1iztfxABZhEcdjYMn0yc5MKCLObX5bZdOOrmxtIPw/9DTXvxU0LxSZW9QVQ8C5T8S+8JF4tjmwqLxFOyDWLgrBzguZhEGWpPaT/K4zktIKZyNQIaQAJVsvseGkvMFXhqXy2pZ+ouh3M3cBf7sqUDOtkS5Tt9ZRgxOo4zx+/jlov3ueb9aVuVdL5rie/cdw8O4MEQZKEYZIE8Wr/yLPNOq3/7xAkda0dZQBb3eVEKh3FysCNl9n5VDDkSOiz8Qy/XE/r9bGS9fp0vbz+bTCtyw5qvdnSTCeCPhLbHrcX/YE8a09/99IZiZzmVos50gLGyeGO4KONZahQpiiw2gUGXVboHwi7ten+1m5a3sB7oz8mcvptP5i/2huMt3cG6+pAF/zFrm2dyZJdvQFbPbV/J5I/hgajWTv9F4Qpivhiwfy1vo3dPRt7O53+mQ60tfR2oe3rQRv/jd7AtfQ7f73dgf9Ip2NUr+P+vs3hgBZuIwpBdKFGdNSe6TZS+QGhbIPwX1G9zjPjKnIjCbdQHCSuC/3j36podsWFIHBgJv56WCGZIULJGtlLCQlmkhjw2uMIx7fpw4KZeLkBtT2CsBTfRQ0NZuL4us2uRhBKjp3Z6qZgqhMnG6cjLl44z3TaJ+qAqSNrv7rUSOFrtOfUBVMnZv4Wr0E5vBY0OpjKY6O/snU4bSHHxgQzmeSHATVY8FDUcYexwVSK4PCzmoDzg9bGHwKmMgiy68+doZxdM7P2iWZgJnM/uwzj8VuhkEtL/7MfA/O8ya/R0wwPpVj4xukTxmAqOEF+GNbeCEp9YSgekAkyAExl4YTRiYxlTlNCTvuWhLrfAFNLkFkjnKOUM+s2ONXgf0b193Zs4sBvAAAAAElFTkSuQmCC"
+                        alt="WhatsApp">
                 </a>
             </div>
-            <section id="gallery">
-                <h2>Galeria de Imagens</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><img
-                            src="https://gestaoclick.com.br/wp-content/uploads/decora195167195163o-natalina-1-788x475.webp"
-                            alt="Imagem 1"></div>
-                    <div class="gallery-item"><img
-                            src="https://www.supertecinfo.com.br/cache/4d3b8a1d04849d6a5793a5413c71fef6.png"
-                            alt="Imagem 2"></div>
-                    <div class="gallery-item"><img
-                            src="https://img.clasf.com.br/2019/05/11/Assistencia-Tecnica-Especializada-em-Informatica-20190511080133.0198480015.jpg"
-                            alt="Imagem 3"></div>
-                    <div class="gallery-item"><img
-                            src="https://img.clasf.com.br/2019/10/18/Assistencia-Tecnica-Informatica-Computadores-Notebooks-20191018233026.9493650015.jpg"
-                            alt="Imagem 4"></div>
-                </div>
-            </section>
 
-            <section id="team">
-                <h2>Conheça Nossa Equipe</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="https://img.freepik.com/vetores-premium/ilustracao-de-avatar-de-estudante-icone-de-perfil-de-usuario-avatar-de-jovem_118339-4402.jpg"
-                            alt="">
-                        <h3>Thiago</h3>
-                        <p>Função Programador </p>
-                    </div>
-                    <div class="team-member">
-                        <img src="https://img.freepik.com/vetores-premium/um-menino-de-desenho-animado-com-fones-de-ouvido-a-ouvir-musica_1057-125184.jpg"
-                            alt="">
-                        <h3>LK00</h3>
-                        <p>Função Assistente Geral</p>
-                    </div>
-                    <!-- Adicione mais membros da equipe aqui -->
-                </div>
-            </section>
+        </div>
+        <div class="redes-sociais">
+            <h3>Siga-nos</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
 
-
-            <section id="social-media">
-                <h2>Siga-nos nas Redes Sociais</h2>
-                <div class="social-media-feeds">
-                    <!-- Widget do Facebook -->
-                    <div class="fb-page"
-                        data-href="https://www.instagram.com/th_informatica__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        data-tabs="timeline" data-width="" data-height="" data-small-header="false"
-                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                        <blockquote
-                            cite="https://www.instagram.com/th_informatica__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            class="fb-xfbml-parse-ignore">
-                            <a
-                                href="https://www.instagram.com/th_informatica__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Sua
-                                Página no instagram</a>
-                        </blockquote>
-                    </div>
-                    <!-- Widget do Instagram (use um plugin de terceiros) -->
-                    <div id="instagram-feed"></div>
-                </div>
-            </section>
-            <section id="countdown">
-                <h2>Promoção Especial</h2>
-                <div id="countdown-timer"></div>
-            </section>
-
-
-
-
-            <section id="products">
-                <h2>Produtos</h2>
-                <div class="product-grid">
-                    <div class="product-card" data-id="1" data-name="Produto 1" data-price="10.00">
-                        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQDsjjeVJnfKGOnpDClVg8Kfk8J8u8nAD6nowFwJCsPfmnCwQSMx3mbAJQTeLbVwvLCkDZVZ7FSg666Dm-KP0YwgtTNNt7XJz1i3KE7xQJ2xnqTRPLp2ERv&usqp=CAE"
-                            alt="Produto 1">
-                        <h3>Produto 1</h3>
-                        <p>Disco Rígido Interno Western Digital Wd Caviar Blue Wd3200aajs 320gb Azul.</p>
-                        <p>R$ 54,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="product-card" data-id="2" data-name="Produto 2" data-price="20.00">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_825163-MLA74781941253_022024-O.webp"
-                            alt="Produto 2">
-                        <h3>Produto 2</h3>
-                        <p>Teclado Multilaser TC065 QWERTY português Brasil cor preto.</p>
-                        <p>R$ 20,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
-                    </div>
-                    <div class="product-card" data-id="3" data-name="Produto 3" data-price="30.00">
-                        <img src="https://http2.mlstatic.com/D_NQ_NP_878916-MLB45821917330_052021-O.webp"
-                            alt="Produto 3">
-                        <h3>Produto 3</h3>
-                        <p>Kit 4 Peças Ventilador Cooler Ventoinha 80x80x25mm 12v.</p>
-                        <p>R$ 47,00</p>
-                        <button class="add-to-cart">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-
-                <div class="product-card" data-id="4" data-name="Produto 4" data-price="30.00">
-                    <img src="https://http2.mlstatic.com/D_NQ_NP_705148-MLB76346188685_052024-O.webp" alt="Produto 4">
-                    <h3>Produto 4</h3>
-                    <p>Monitor Led Semp Toshiba 18,5 Polegadas Mlc 1941w Vga Lcd (Recondicionado).</p>
-                    <p>R$ 200,00</p>
-                    <button class="add-to-cart">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="product-card" data-id="5" data-name="Produto 5" data-price="30.00">
-                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR-hydN4c5Q4i2KTK1CtRPTj7ixQ0Cx0M4ab2DFNn19Dqk9MQeCEUp5Cv7odcmPFkw_w048IjL2HyKTIfcHSlK-ytAgJjLwZ_bxMrjm1UT9ptSE8z9-Qlau&usqp=CAE"
-                        alt="Produto 5">
-                    <h3>Produto 5</h3>
-                    <p>Placa Video Mult Tn502 Pci 2 Video Thinnetworks
-                        Placa Video Mult Tn502 Pci 2 Video Thinnetworks - Tipo de memória: DDR2 - Interface: PCI -
-                        Tamanho da memória: 16 MB -
-                        Interface de memória: 23 bits - Porta: 2x VGA</p>
-                    <p>R$ 90,00</p>
-                    <button class="add-to-cart">Adicionar ao Carrinho</button>
-                </div>
-                <div class="product-card" data-id="6" data-name="Produto 6" data-price="30.00">
-                    <img src="https://lojamultilaser.vtexassets.com/arquivos/ids/1193243-1600-900?v=638521182441430000&width=1600&height=900&aspect=true"
-                        alt="Produto 3">
-                    <h3>Produto 6</h3>
-                    <p>Placa De Rede Pci Conexão Rj45 Multilaser - GA131.</p>
-                    <p>R$ 39,90</p>
-                    <button class="add-to-cart">Adicionar ao Carrinho</button>
-
-            </section>
-
-
-            <section id="cart">
-                <h2>Carrinho de Compras</h2>
-                <div class="cart-items"></div>
-                <div class="cart-total">
-                    <p>Total: R$ <span id="cart-total">0.00</span></p>
-                    <button id="checkout">Finalizar Compra</button>
-                    <samp>
-                        <h2> Não Faça o Pedido Pelo site Entre em contato para finalizar seu Pedido Para sua segurança
-                        </h2>
-                    </samp>
-                </div>
-            </section>
-
-            <div class="chat-container">
-                <div class="chat-box" id="chat-box">
-                    <div class="chat-message bot">
-                        <p>Olá! Em que posso ajudar hoje?</p>
-                    </div>
-                </div>
-                <input type="text" id="user-input" placeholder="Digite sua mensagem...">
-                <button id="send-btn">Enviar</button>
-            </div>
-
-
-            <section id="products" style="display: none;">
-                <h2>Produtos</h2>
-                <div class="product-grid">
-                    <!-- Cartões de produtos serão carregados aqui -->
-                </div>
-            </section>
-
-            <section id="payment-options" style="display: none;">
-                <h2>Opções de Pagamento</h2>
-                <div class="payment-methods">
-                    <div class="payment-method">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzSQVqZbep18VBPO62CoeTHhNXsYh-7gK5KA&usqp=CAU"
-                            alt="Cartão de Crédito">
-                        <p>Cartão de Crédito</p>
-                    </div>
-                    <div class="payment-method">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxbC6Q-u-oYsHapem_zia3Y65QhBymX7dAD87-BD7gxck0noJOx-uqfQGWYVrV3Oc6nzU&usqp=CAU"
-                            alt="Cartão de Débito">
-                        <p>Cartão de Débito</p>
-                    </div>
-                    <div class="payment-method">
-                        <img src="https://www.shutterstock.com/image-vector/paypal-multinational-financial-technology-payment-260nw-2268855457.jpg"
-                            alt="PayPal">
-                        <p>PayPal</p>
-                    </div>
-                    <div class="payment-method">
-                        <img src="https://i.pinimg.com/736x/d8/cf/d6/d8cfd611e4e7f28e5f2adc1a0054f36f.jpg" alt="Pix">
-                        <p>Pix</p>
-                    </div>
-                    <div class="payment-method">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5566/5566998.png" alt="Parcelamento">
-                        <p>Parcelamento</p>
-                    </div>
-                </div>
-
-                <section id="featured-products">
-                    <h2>Produtos em Destaque</h2>
-                    <div class="featured-grid">
-                        <div class="featured-card">
-                            <img src="images/product1.jpg" alt="Produto 1">
-                            <h3>Produto 1</h3>
-                            <p>R$ 100,00</p>
-                            <button>Comprar</button>
-                        </div>
-                        <!-- Adicione mais produtos em destaque aqui -->
-                    </div>
-                </section>
-
-
-
-            </section>
-
-            <footer>
-                <div class="social-links">
-                    <a href="" target="_blank">Facebook</a>
-                    <a href="" target="_blank">Twitter</a>
-                    <a href="https://www.instagram.com/th_informatica__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        target="_blank">Instagram</a>
-                </div>
-                <form class="newsletter-form">
-                    <label for="newsletter">Assine nossa newsletter:</label>
-                    <input type="email" id="newsletter" name="newsletter" placeholder="Seu email">
-                    <button type="submit">Assinar</button>
-                </form>
-                <p>&copy; 2024. Todos os direitos reservados Site Criado Por @thiago De Amorim Moreira.</p>
-            </footer>
-
-            <script src="script.js"></script>
-
-
-            <!-- Tawk.to Script -->
-            <script type="text/javascript">
-                var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-                (function () {
-                    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-                    s1.async = true;
-                    s1.src = '667bf8bd9d7f358570d3814f';
-                    s1.charset = 'UTF-8';
-                    s1.setAttribute('crossorigin', '*');
-                    s0.parentNode.insertBefore(s1, s0);
-                })();
-
-
-
-            </script>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
