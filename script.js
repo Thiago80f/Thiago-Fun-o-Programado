@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 1, nome: 'Processador Intel i7', categoria: 'processadores', preco: 1200, imagem: 'processador.jpg' },
         { id: 2, nome: 'Placa-Mãe ASUS', categoria: 'placas-mae', preco: 800, imagem: 'placa-mae.jpg' },
         { id: 3, nome: 'Memória RAM 16GB', categoria: 'memorias', preco: 400, imagem: 'memoria.jpg' },
+        // Adicione mais produtos conforme necessário
     ];
 
     const listaProdutos = document.querySelector('.lista-produtos');
@@ -28,7 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Filtros de Pesquisa
     const categoriaSelect = document.getElementById('categoria');
     const precoSelect = document.getElementById('preco');
-    const filtroButton = document.querySelector('.filtros button');
+    const filtroButton = document.getElementById('filtrar-btn');
+    const pesquisaInput = document.getElementById('pesquisa');
+    const buscarButton = document.getElementById('buscar-btn');
 
     filtroButton.addEventListener('click', () => {
         const categoria = categoriaSelect.value;
@@ -45,6 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
             produtosFiltrados = produtosFiltrados.filter(produto => produto.preco >= min && produto.preco <= max);
         }
 
+        renderProdutos(produtosFiltrados);
+    });
+
+    buscarButton.addEventListener('click', () => {
+        const pesquisa = pesquisaInput.value.toLowerCase();
+        const produtosFiltrados = produtos.filter(produto => produto.nome.toLowerCase().includes(pesquisa));
         renderProdutos(produtosFiltrados);
     });
 
