@@ -208,3 +208,14 @@ footer .redes-sociais a {
         grid-template-columns: 1fr;
     }
 }
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtros select,
+.filtros input,
+.filtros button {
+    padding: 5px;
+}
