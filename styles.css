@@ -261,3 +261,24 @@ footer .redes-sociais a {
 .whatsapp-button img:hover {
     transform: scale(1.1);
 }
+/* Estilos padrão para todos os dispositivos */
+
+/* Exemplo de estilos para larguras maiores (desktops e tablets) */
+@media only screen and (min-width: 768px) {
+    /* Estilos específicos para telas maiores que 768px de largura */
+    /* Por exemplo, ajuste de larguras, margens, etc. */
+}
+
+/* Estilos para tablets e smartphones */
+@media only screen and (max-width: 767px) {
+    /* Estilos específicos para telas menores ou iguais a 767px de largura */
+    /* Exemplo: ajuste de tamanhos de fonte, layout de colunas, etc. */
+}
+
+/* Estilos para smartphones em orientação paisagem */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+    /* Estilos específicos para smartphones em orientação paisagem */
+}
+
+/* Ajuste geral para todos os tamanhos de tela */
+/* Isso pode incluir ajustes mínimos ou ajustes que se aplicam a todos os tamanhos de tela */
