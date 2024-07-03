@@ -541,11 +541,11 @@ section {
 /* Background Animation */
 @keyframes bg-animation {
     0% {
-        background-color: #ff6347;
+        background-color: #4778ff;
     }
 
     25% {
-        background-color: #6a5acd;
+        background-color: #7866eb;
     }
 
     50% {
@@ -553,11 +553,11 @@ section {
     }
 
     75% {
-        background-color: #ff1493;
+        background-color: #38e1f8;
     }
 
     100% {
-        background-color: #ff6347;
+        background-color: #ff4747;
     }
 }
 
