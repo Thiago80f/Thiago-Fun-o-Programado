@@ -24,15 +24,76 @@
                 <li><a href="#carrinho">Carrinho</a></li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar...">
-            <button>Buscar</button>
-        </div>
-
 </div>
 
     </header>
     <main>
+
+        <section id="post">
+            <h2>Postar Conteúdo</h2>
+            <form id="post-form">
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required>
+        
+                <label for="content">Conteúdo:</label>
+                <textarea id="content" name="content" required></textarea>
+        
+                <label for="file">Arquivo (opcional):</label>
+                <input type="file" id="file" name="file">
+        
+                <button type="submit">Postar</button>
+            </form>
+        </section>
+        
+        <section id="promotions">
+            <h2>Promoções</h2>
+            <div id="promotions-container">
+                <!-- As promoções serão adicionadas aqui -->
+            </div>
+            <form id="promotion-form" style="display:none;">
+                <label for="promotion-title">Título:</label>
+                <input type="text" id="promotion-title" name="promotion-title" required>
+        
+                <label for="promotion-content">Conteúdo:</label>
+                <textarea id="promotion-content" name="promotion-content" required></textarea>
+        
+                <button type="submit">Postar Promoção</button>
+            </form>
+            <button id="admin-login-button">Login Admin</button>
+            <div id="admin-login-form" style="display:none;">
+                <label for="admin-password">Senha:</label>
+                <input type="password" id="admin-password" name="admin-password" required>
+                <button id="admin-login-submit">Login</button>
+            </div>
+        </section>
+        
+        <section id="videos">
+            <h2>Vídeos</h2>
+            <div class="video-container">
+                <!-- Adicionando um vídeo local -->
+                <div class="video">
+                    <video width="100%" height="200" controls>
+                        <source src="videos/meu_video.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+            </div>
+        </section>
+        
+        <section id="images">
+            <h2>Imagens</h2>
+            <div class="image-container">
+                <!-- Adicione links para imagens aqui -->
+            </div>
+        </section>
+        
+        <section id="texts">
+            <h2>Textos</h2>
+            <div class="text-container">
+                <!-- Adicione links para textos aqui -->
+            </div>
+        </section>
+
         <section id="home">
             <h1>Bem-vindo à Nossa Loja de Peças de Computadores</h1>
             <p>Encontre as melhores peças e acessórios para o seu PC.</p>
