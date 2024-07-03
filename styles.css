@@ -295,7 +295,7 @@ h2 {
 }
 
 .produto {
-    border: 1px solid #ccc;
+    border: 1px solid #eb0202;
     padding: 10px;
     text-align: center;
     border-radius: 8px;
@@ -309,7 +309,7 @@ h2 {
 
 .carrinho {
     margin-top: 20px;
-    border-top: 2px solid #ccc;
+    border-top: 2px solid #f70909;
     padding-top: 20px;
 }
 
@@ -334,7 +334,7 @@ h2 {
 .btn {
     display: inline-block;
     background-color: #007bff;
-    color: #fff;
+    color: #f20505;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
