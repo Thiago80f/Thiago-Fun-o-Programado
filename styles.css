@@ -487,7 +487,7 @@ section {
 }
 
 .add-to-cart {
-    background-color: #28a745;
+    background-color: #0763ed;
     color: #fff;
     padding: 10px;
     border: none;
@@ -496,7 +496,7 @@ section {
 }
 
 .add-to-cart:hover {
-    background-color: #218838;
+    background-color: #004cff;
 }
 
 #cart {
