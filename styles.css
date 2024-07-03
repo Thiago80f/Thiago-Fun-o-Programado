@@ -538,7 +538,6 @@ section {
 #checkout:hover {
     background-color: #0056b3;
 }
-
 /* Background Animation */
 @keyframes bg-animation {
     0% {
@@ -568,6 +567,9 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     animation: bg-animation 10s infinite alternate;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -584,6 +586,7 @@ header h1 {
 }
 
 main {
+    flex: 1;
     padding: 2rem;
 }
 
@@ -613,9 +616,30 @@ li:hover {
 footer {
     background-color: #28a745;
     color: #fff;
-    text-align: flex;
+    text-align: center;
     padding: 1rem;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-media,
+footer .contact {
+    margin-bottom: 1rem;
+}
+
+footer .social-media p,
+footer .contact p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
