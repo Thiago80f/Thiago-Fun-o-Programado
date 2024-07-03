@@ -217,7 +217,7 @@ footer .redes-sociais a {
 .filtros select,
 .filtros input,
 .filtros button {
-    padding: 5px;
+    padding: 2px;
 }
 .container {
     display: flex;
@@ -225,12 +225,12 @@ footer .redes-sociais a {
     align-items: center;
     height: 100vh;
     /* Ajuste a altura conforme necessário */
-    background-color: #f0f0f0;
+    background-color: #830fdb;
 }
 
 .animated-text {
     font-size: 3rem;
-    animation: bounce 2s infinite;
+    animation: bounce 7s infinite;
     /* Definindo a animação 'bounce' por 2 segundos, infinitamente */
 }
 
