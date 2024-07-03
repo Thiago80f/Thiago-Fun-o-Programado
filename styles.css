@@ -95,7 +95,7 @@ main section h2 {
     margin-top: 10px;
     padding: 5px 10px;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(77, 77, 77);
     border: none;
     cursor: pointer;
 }
