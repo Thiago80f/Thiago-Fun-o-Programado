@@ -152,6 +152,33 @@
 
     </div>
     <script src="scripts.js"></script>
+    <script>
+        document.getElementById('form-postagem').addEventListener('submit', function (event) {
+                event.preventDefault(); // Evita o comportamento padrão de envio do formulário
 
+                // Aqui você pode adicionar lógica para enviar os dados para o backend
+                // Por exemplo, usando AJAX para enviar os dados para um arquivo PHP, Node.js, etc.
+
+                // Exemplo básico de envio com AJAX usando JavaScript puro
+                const formData = new FormData(this);
+                fetch('url_do_backend_de_processamento', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert('Conteúdo postado com sucesso!');
+                        // Aqui você pode adicionar lógica adicional, como limpar os campos do formulário
+                        document.getElementById('titulo').value = '';
+                        document.getElementById('conteudo').value = '';
+                    })
+                    .catch(error => {
+                        console.error('Erro ao enviar dados:', error);
+                        alert('Ocorreu um erro ao postar o conteúdo. Por favor, tente novamente.');
+                    });
+            });
+
+    </script>
+    
 </body>
 </html>
