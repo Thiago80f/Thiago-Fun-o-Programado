@@ -229,7 +229,7 @@ body {
 
 /* Estilos para a seção de promoções */
 .promocoes-section {
-    background-color: #f9f9f9;
+    background-color: #8800a4;
     padding: 50px 0;
     text-align: center;
 }
@@ -487,8 +487,8 @@ section {
 }
 
 .add-to-cart {
-    background-color: #0763ed;
-    color: #ff0000;
+    background-color: #008cff;
+    color: #ffffff;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -496,7 +496,7 @@ section {
 }
 
 .add-to-cart:hover {
-    background-color: #004cff;
+    background-color: #005eff;
 }
 
 #cart {
