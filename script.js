@@ -85,3 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const products = document.querySelectorAll('.product');
+    
+    products.forEach(product => {
+        product.addEventListener('mouseenter', () => {
+            product.classList.add('animate__pulse');
+        });
+
+        product.addEventListener('animationend', () => {
+            product.classList.remove('animate__pulse');
+        });
+
+        product.addEventListener('mouseleave', () => {
+            product.classList.remove('animate__pulse');
+        });
+    });
+});

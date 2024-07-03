@@ -538,3 +538,84 @@ section {
 #checkout:hover {
     background-color: #0056b3;
 }
+
+/* Background Animation */
+@keyframes bg-animation {
+    0% {
+        background-color: #ff6347;
+    }
+
+    25% {
+        background-color: #6a5acd;
+    }
+
+    50% {
+        background-color: #20b2aa;
+    }
+
+    75% {
+        background-color: #ff1493;
+    }
+
+    100% {
+        background-color: #ff6347;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    animation: bg-animation 10s infinite alternate;
+}
+
+header {
+    background-color: #28a745;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
