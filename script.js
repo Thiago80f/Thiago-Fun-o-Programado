@@ -35,3 +35,53 @@ function realizarCheckout() {
     carrinho = []; // Limpa o carrinho após a compra
     atualizarCarrinho();
 }
+// scripts.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Adicione funcionalidades JavaScript aqui, como carregar vídeos, imagens e textos dinamicamente
+});
+// scripts.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('post-form');
+    const postsContainer = document.getElementById('posts-container');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        
+        const title = form.title.value;
+        const content = form.content.value;
+        const file = form.file.files[0];
+
+        const post = document.createElement('div');
+        post.className = 'post';
+        
+        const postTitle = document.createElement('h3');
+        postTitle.textContent = title;
+        post.appendChild(postTitle);
+        
+        const postContent = document.createElement('p');
+        postContent.textContent = content;
+        post.appendChild(postContent);
+
+        if (file) {
+            const fileURL = URL.createObjectURL(file);
+            if (file.type.startsWith('image/')) {
+                const img = document.createElement('img');
+                img.src = fileURL;
+                img.style.maxWidth = '100%';
+                post.appendChild(img);
+            } else if (file.type.startsWith('video/')) {
+                const video = document.createElement('video');
+                video.src = fileURL;
+                video.controls = true;
+                video.style.maxWidth = '100%';
+                post.appendChild(video);
+            }
+        }
+
+        postsContainer.prepend(post);
+
+        form.reset();
+    });
+});
