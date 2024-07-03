@@ -23,3 +23,36 @@ def post_content():
 
 if __name__ == '__main__':
     app.run(debug=True)
+from flask import Flask
+from flask_csp import csp_header
+
+app = Flask(__name__)
+app.config['CSP_POLICY'] = {
+    'default-src': [
+        '\'self\'',
+        'https://youtu.be/dFootn6sFR8?si=VGel_R9fviUT5YuB'  # Permitir YouTube
+    ]
+}
+
+
+@app.route('/')
+@csp_header()
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/hello')
+def hello():
+    return 'Hello, World! Esta é uma rota diferente.'
+
+if __name__ == '__main__':
+    app.run(debug=True)
