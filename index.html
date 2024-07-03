@@ -181,6 +181,37 @@
             <a href="#">Instagram</a>
 
         </div>
+        <div class="container">
+            <h1>Postar Conteúdo</h1>
+            <form id="postForm">
+                <textarea id="content" placeholder="Digite seu conteúdo aqui"></textarea><br>
+                <button type="submit">Postar</button>
+            </form>
+            <div id="message"></div>
+        </div>
+        
+        <script>
+            document.getElementById('postForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const content = document.getElementById('content').value;
+
+                fetch('/post', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ content: content }),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('message').innerText = data.message;
+                        document.getElementById('content').value = ''; // Limpa o formulário
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+            });
+        </script>
     </footer>
     <script src="scripts.js"></script>
 </body>
