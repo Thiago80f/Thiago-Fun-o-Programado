@@ -219,3 +219,117 @@ footer .redes-sociais a {
 .filtros button {
     padding: 2px;
 }
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.mobile-frame {
+    width: 375px;
+    height: 667px;
+    border: 16px solid #333;
+    border-radius: 36px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    overflow-y: scroll;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+section {
+    padding: 20px 0;
+}
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#post-form label {
+    margin: 10px 0 5px;
+}
+
+#post-form input,
+#post-form textarea,
+#post-form button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    position: relative;
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+.post button.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.post button.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+}
