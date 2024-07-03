@@ -219,31 +219,3 @@ footer .redes-sociais a {
 .filtros button {
     padding: 2px;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    /* Ajuste a altura conforme necessário */
-    background-color: #005cfb7c;
-}
-
-.animated-text {
-    font-size: 1rem;
-    animation: bounce 2s infinite;
-    /* Definindo a animação 'bounce' por 2 segundos, infinitamente */
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
