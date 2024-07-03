@@ -229,7 +229,7 @@ body {
 
 /* Estilos para a seção de promoções */
 .promocoes-section {
-    background-color: #8800a4;
+    background-color: #00c1fceb;
     padding: 50px 0;
     text-align: center;
 }
@@ -278,7 +278,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    border: 1px solid #ccc;
+    border: 1px solid #5d32a2;
     padding: 20px;
     border-radius: 8px;
 }
