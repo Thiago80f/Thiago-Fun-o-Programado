@@ -216,4 +216,59 @@ document.addEventListener('DOMContentLoaded', () => {
                         console.error('Error:', error);
                     });
  });
-  
+ // JavaScript para um carrinho de compras básico
+
+// Array para armazenar os itens no carrinho
+let carrinho = [];
+
+// Função para adicionar um item ao carrinho
+function adicionarAoCarrinho(item) {
+    carrinho.push(item);
+    console.log('Item adicionado ao carrinho:', item);
+    atualizarCarrinho();
+}
+
+// Função para remover um item do carrinho
+function removerDoCarrinho(index) {
+    carrinho.splice(index, 1);
+    console.log('Item removido do carrinho:', index);
+    atualizarCarrinho();
+}
+
+// Função para calcular o total do carrinho
+function calcularTotal() {
+    let total = 0;
+    for (let item of carrinho) {
+        total += item.preco;
+    }
+    return total.toFixed(2); // Formata para duas casas decimais
+}
+
+// Função para atualizar a exibição do carrinho na interface do usuário
+function atualizarCarrinho() {
+    const carrinhoElemento = document.getElementById('carrinho');
+    carrinhoElemento.innerHTML = ''; // Limpa o conteúdo atual do carrinho
+
+    for (let i = 0; i < carrinho.length; i++) {
+        const item = carrinho[i];
+        const itemElemento = document.createElement('div');
+        itemElemento.innerHTML = `
+            <span>${item.nome} - R$ ${item.preco.toFixed(2)}</span>
+            <button onclick="removerDoCarrinho(${i})">Remover</button>
+        `;
+        carrinhoElemento.appendChild(itemElemento);
+    }
+
+    // Mostra o total do carrinho
+    const totalElemento = document.createElement('div');
+    totalElemento.innerHTML = `<strong>Total: R$ ${calcularTotal()}</strong>`;
+    carrinhoElemento.appendChild(totalElemento);
+}
+
+// Exemplo de uso:
+const produto1 = { nome: 'Notebook', preco: 2500 };
+const produto2 = { nome: 'Mouse', preco: 50 };
+
+adicionarAoCarrinho(produto1);
+adicionarAoCarrinho(produto2);
+ 
