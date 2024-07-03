@@ -474,7 +474,7 @@ section {
 }
 
 .product-card {
-    border: 1px solid #ddd;
+    border: 1px solid #86009d;
     padding: 20px;
     text-align: center;
     border-radius: 5px;
@@ -488,7 +488,7 @@ section {
 
 .add-to-cart {
     background-color: #0763ed;
-    color: #03cee1;
+    color: #ff0000;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -515,7 +515,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid #0188ffd4;
+    border-bottom: 1px solid #ff0101d4;
 }
 
 .cart-item h4 {
