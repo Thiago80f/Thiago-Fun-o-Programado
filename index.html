@@ -87,7 +87,10 @@
         <button class="btn" onclick="realizarCheckout()"><s>Finalizar Compra</s></button>
         </section>
 
-        <h1>Por Favor Entre Em Contato Para Finalizar Seu Pedido Para Sua Segurança</h1>
+        <h1>Por Favor Entre Em Contato Pelo Nosso whatsapp
+            Para Finalizar Seu Pedido Para Sua Segurança
+
+        </h1>
         </div>
         </section>
 
@@ -114,6 +117,57 @@
         </div>
     </footer>
     <script src="scripts.js"></script>
-</body>
 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática Total - Mobile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<>
+    <div class="mobile-frame">
+        <header>
+            <h1>Informática Total</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#post">Postar</a></li>
+                    <li><a href="#promotions">Promoções</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#images">Imagens</a></li>
+                    <li><a href="#texts">Textos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="post">
+            <h2>Postar Conteúdo</h2>
+            <form id="post-form">
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="content">Conteúdo:</label>
+                <textarea id="content" name="content" required></textarea>
+                
+                <label for="file">Arquivo (opcional):</label>
+                <input type="file" id="file" name="file">
+                
+                <button type="submit">Postar</button>
+            </form>
+        </section>
+
+        <section id="posts">
+            <h2>Posts Recentes</h2>
+            <div id="posts-container">
+                <!-- Os posts serão adicionados aqui -->
+            </div>
+        </section>
+
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
 </html>
