@@ -32,11 +32,9 @@
     </header>
     <main>
         <section>
-<div class="countdown-container">
-    <h1>Promoção Termina Em:</h1>
-    <div id="countdown">
-        <span id="days"></span><h2>3Dias</h2>
-    </div>
+<h1>Promoção</h1>
+<p>Aproveite nossa promoção por tempo limitado!</p>
+<div class="countdown" id="countdown"></div>
 
 <section id="promocoes" class="promocoes-section">
     <div class="container">
@@ -145,6 +143,33 @@
                 </a>
             </div>
     </footer>
+<script>
+    // Função para calcular o tempo restante até uma data específica
+    function countdown() {
+        // Data final da promoção (exemplo: 31 de dezembro de 2024)
+        const endDate = new Date('2024-12-31T23:59:59');
+        const now = new Date();
+
+        // Calcula a diferença em milissegundos entre as duas datas
+        const difference = endDate.getTime() - now.getTime();
+
+        // Calcula dias, horas, minutos e segundos restantes
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // Exibe o contador de dias
+        document.getElementById('countdown').innerHTML = `Faltam ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos para o término da promoção.`;
+    }
+
+    // Atualiza o contador a cada segundo
+    setInterval(countdown, 1000);
+
+    // Chama countdown() imediatamente para exibir o contador inicialmente
+    countdown();
+</script>
     <script src="scripts.js"></script>
+
 </body>
 </html>
