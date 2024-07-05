@@ -231,7 +231,7 @@
             const encodedMessage = encodeURIComponent(message);
 
             // URL para redirecionar
-            const whatsappURL = `https://wa.me/5533998756987?text=ol%C3%A1%20%20%20dados%20como%20%C3%A7%C3%A3o%20%C3%A7o%20%20%20%20%20%20ao%20${phoneNumber}?text=${encodedMessage}`;
+            const whatsappURL = `https://wa.me/5533998756987${phoneNumber}?text=${encodedMessage}`;
 
             // Redireciona o usuário para o WhatsApp
             window.location.href = whatsappURL;
