@@ -225,13 +225,13 @@
             const phoneNumber = '+55998756987';
 
             // Mensagem personalizada
-            const message = `Olá, gostaria de adicionar o produto ${productName} ao carrinho. O preço é R$ ${productPrice}.`;
+            const message = ` ${productName} ${productPrice}.`;
 
             // Codifica a mensagem para URL
             const encodedMessage = encodeURIComponent(message);
 
             // URL para redirecionar
-            const whatsappURL = `https://wa.me/5533998756987${phoneNumber}?text=${encodedMessage}`;
+            const whatsappURL = `https://wa.me/5533998756987?text=Olá, gostaria de adicionar o produto${phoneNumber}?text=${encodedMessage}`;
 
             // Redireciona o usuário para o WhatsApp
             window.location.href = whatsappURL;
