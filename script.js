@@ -103,3 +103,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+button.addEventListener('click', function() {
+    alert('Botão clicado!');
+    const product = this.getAttribute('data-product');
+    const price = this.getAttribute('data-price');
+    const whatsappNumber = "5533998756987"; // Substitua pelo seu número do WhatsApp com código do país e área
+    const message = `Olá, gostaria de fazer um pedido de ${product} no valor de R$${price}.`;
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.location.href = whatsappLink;
+});
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        let index = 0;
+        const items = carousel.querySelectorAll('.carousel-item');
+        const itemCount = items.length;
+        
+        function showNextItem() {
+            items[index].classList.remove('active');
+            index = (index + 1) % itemCount;
+            items[index].classList.add('active');
+        }
+
+        // Inicializa o carrossel
+        items[index].classList.add('active');
+        setInterval(showNextItem, 3000); // Muda a imagem a cada 3 segundos
+    });
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const product = this.getAttribute('data-product');
+            const price = this.getAttribute('data-price');
+            const whatsappNumber = "5598999999999"; // Substitua pelo seu número do WhatsApp com código do país e área
+            const message = `Olá, gostaria de fazer um pedido de ${product} no valor de R$${price}.`;
+            const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappLink;
+        });
+    });
+});
+ 
