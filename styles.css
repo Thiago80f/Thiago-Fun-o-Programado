@@ -229,32 +229,32 @@ body {
 
 /* Estilos para a seção de promoções */
 .promocoes-section {
-    background-color: #00c1fceb;
-    padding: 50px 0;
-    text-align: center;
+    background-color: #262727eb;
+    padding: 3px;
+    text-align:center ;
 }
 
 .promo-item {
-    margin-bottom: 40px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 2px;
+    border: 0px solid #d30000;
+    border-radius: 2px;
+    box-shadow:  1px rgba(0, 0, 0, 0.0);
 }
 
 .promo-item img {
-    max-width: 100%;
-    border-radius: 8px;
+    max-width: 15%;
+    border-radius: 2px;
 }
 
 .promo-item h3 {
-    margin-top: 10px;
-    font-size: 1.5rem;
+    margin-top: 1px;
+    font-size: 0.35rem;
 }
 
 .promo-item p {
-    margin-bottom: 10px;
-    color: #555;
+    margin-bottom: 1px;
+    color: #c80000;
 }
 
 .btn {
@@ -809,8 +809,8 @@ button:hover {
   left: 0;
   width: var(--size-orbe);
   height: var(--size-orbe);
-  background-color: #3ae374;
-  box-shadow: 0px 0px 20px 2px #3ae374;
+  background-color: #e33ad8;
+  box-shadow: 0px 0px 20px 2px #ffff00;
   border-radius: 50%;
 }
 
@@ -825,4 +825,57 @@ button:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+.loader {
+ width: 65px;
+ height: 65px;
+ border: 8px solid #22ff00a6;
+ border-radius: 50px;
+ position: center;
+}
+.btn {
+  --color1: #5e615f;
+  --color2: #818181;
+  perspective: 1000px;
+  padding: 1em 1em;
+  background: linear-gradient(var(--color1), var(--color2));
+  border: none;
+  outline: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ff0000e5;
+  text-shadow: 0 10px 10px #009dff;
+  cursor: pointer;
+  transform: rotateX(70deg) rotateZ(30deg);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.btn::before {
+  content: "";
+  width: 100%;
+  height: 15px;
+  background-color: var(--color2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotateX(90deg);
+  transform-origin: bottom;
+}
+
+.btn::after {
+  content: "";
+  width: 15px;
+  height: 100%;
+  background-color: var(--color1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotateY(-90deg);
+  transform-origin: right;
+}
+
+.btn:hover {
+  transform: rotateX(30deg) rotateZ(0);
 }
